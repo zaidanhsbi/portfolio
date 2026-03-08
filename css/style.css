@@ -1,0 +1,434 @@
+
+::selection {
+    background-color: black;
+    color: white;
+}
+body {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+
+/* Nav */
+.navbar {
+    z-index: 10;
+    width: 100%;
+    padding-top: 2px;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    position: sticky;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul{
+    font-size: 1.2rem; /* fix: was missing unit */
+    font-family: "JetBrains Mono", monospace;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.navbar ul li a{
+     text-decoration: none;
+         color: black;
+}
+.navbar ul li:first-child a{
+    font-weight: 500;
+}
+
+.navbar ul li:last-child a {
+    font-weight: 400;
+}
+
+/* Main */
+
+/* Profile */
+.container {
+    margin-top: 125px;
+    width: 800px;
+    padding-left: 20px;
+    justify-content: center;
+}
+
+.container .profile{
+    display: flex;
+}
+
+.container .profile .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 45px;
+}
+
+.container .profile h1{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    margin: 0;
+    font-size: 3rem;
+}
+
+.container .profile p{
+    color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 30px;
+    font-size: 1rem;
+    font-family: "JetBrains Mono", monospace;
+    margin: 0;
+}
+
+.container .profile img{
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+/* Zaidan's Info */
+.profile-info{
+    margin-top: 45px;
+}
+
+.location svg, .school svg, .telephone svg, .email svg{
+    width: 24px;
+    color: rgba(0, 0, 0, 0.5);
+    height: 24px;
+}
+
+.location, .school, .telephone, .email {
+    margin-block: -10px;
+    display: flex;
+    align-items: center; 
+    gap: 8px;            
+}
+
+.profile-info p {
+    font-family: "JetBrains Mono", monospace;            
+}
+
+/* Social Media */
+.social-media{
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px;
+}
+.social-media svg{
+    color: rgb(0, 0, 0);
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.social-media a {
+    border: 0.1px solid rgba(0, 0, 0, 0.2);
+}
+
+.social-media a h3 {
+    border-bottom: 0.1px solid transparent; 
+    transition: border-bottom 0.3s ease;
+}
+
+.social-media a:hover h3 {
+    border-bottom: 0.1px solid rgba(0, 0, 0, 0.5);
+}
+
+.social-media img{
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.social-media a{
+    display: flex;
+    text-decoration: none;
+    align-items: center; 
+    color: black;
+}
+.social-media .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.social-media .text h3{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.social-media .text p{
+    margin: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* About */
+.about {
+    margin-top: 45px;
+}
+
+.about h2{
+    margin-bottom: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.about p{
+    margin: 0;
+    margin-top: 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.2rem;
+}
+
+.about p:last-child{
+    margin-top: 30px;
+}
+
+/* Education */
+.education .smk{
+    display: flex;
+    justify-content: space-between;
+}
+
+.education h2{
+    margin: 0;
+    margin-top: 45px;
+    margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.education button{
+    background-color: white;
+    border: none;
+    width: 100%;
+}
+
+.education i{
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.education .text p:first-child{
+    margin: 0;
+    font-size: 1.3rem;
+    font-family: "Inter", sans-serif;
+}
+.education .text p:last-child{
+    margin: 0;
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: start;
+    font-family: "JetBrains Mono", monospace;
+}
+.education .smk .left{
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.education svg{
+    width: 1.5rem;
+}
+
+.smk .arrow {
+    transition: transform 0.3s ease;
+}
+
+.smk.open .arrow {
+    transform: rotate(180deg); 
+}
+
+/* Detail content */
+.education-detail {
+    display: none;
+    padding: 16px;
+    text-align: justify;
+    border-top: none;
+}
+
+.education-detail.open {
+    display: block;
+}
+
+.education-detail p {
+    margin: 0;
+    font-family: "JetBrains Mono";
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Stack */
+.stack h2{
+    margin: 0;
+    margin-top: 45px;
+    margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Contact */
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact p{
+    margin: 0;
+    margin-top: 150px;
+    margin-bottom: 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.contact .icons-wrapper{
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+
+
+@media (max-width: 900px) {
+    /* Main */
+    .container {
+        width: 90%;
+        margin-top: 80px;
+        padding-left: 10px;
+    }
+
+    .social-media {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Main */
+    .container {
+        width: 90%;
+        margin-top: 60px;
+        padding-left: 10px;
+    }
+
+    .container .profile h1 {
+        font-size: 2.2rem;
+    }
+
+    .container .profile p {
+        padding-bottom: 15px;
+    }
+
+    .container .profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    /* Social media*/
+    .social-media {
+        grid-template-columns: 1fr;
+    }
+
+    /* About */
+    .about p {
+        font-size: 1rem;
+    }
+
+    /* Education */
+    .education .text p:first-child {
+        font-size: 1.1rem;
+    }
+
+    .education .text p:last-child {
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .contact p {
+        margin-top: 80px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    /* Nav */
+    .navbar ul {
+        gap: 12px;
+        font-size: 0.9rem;
+    }
+
+    /* Main */
+    .container {
+        width: 95%;
+        margin-top: 40px;
+        padding-left: 5px;
+    }
+
+    /* Profile */
+    .container .profile h1 {
+        font-size: 1.8rem;
+    }
+
+    .container .profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+     
+    .about h2, .education h2, .stack h2 {
+        font-size: 1.8rem;
+    }
+
+    .about p {
+        font-size: 0.9rem;
+    }
+
+    /* Social Media */
+    .social-media .text h3 {
+        font-size: 1.1rem;
+    }
+
+    .social-media .text p {
+        font-size: 0.75rem;
+    }
+
+    .social-media img {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    /* Education */
+    .education i {
+        font-size: 1.5rem;
+    }
+
+    /* Footer */
+    .contact p {
+        margin-top: 60px;
+        font-size: 0.85rem;
+    }
+
+    .contact .icons-wrapper {
+        gap: 8px;
+    }
+}
