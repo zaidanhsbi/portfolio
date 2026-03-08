@@ -1,6 +1,7 @@
-/* *{
-    border: 0.2px solid red;
-} */
+::selection {
+    background-color: black;
+    color: white;
+}
 
 body {
     display: flex;
